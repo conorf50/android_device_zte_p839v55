@@ -14,33 +14,33 @@
 # limitations under the License.
 #
 
--include device/bq/msm8916-common/BoardConfigCommon.mk
+-include device/zte/msm8916-common/BoardConfigCommon.mk
 
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/bq/msm8939
-TARGET_KERNEL_CONFIG := cyanogenmod_piccolo_defconfig
+TARGET_KERNEL_SOURCE := kernel/zte/msm8939
+TARGET_KERNEL_CONFIG := cyanogenmod_p839v55_defconfig
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := aquarism5,piccolo,Aquaris_M5
+TARGET_OTA_ASSERT_DEVICE := p839v55,Smart_Ultra_6
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/bq/piccolo/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/p839v55/bluetooth
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/bq/piccolo/cmhw/src
+BOARD_HARDWARE_CLASS += device/zte/p839v55/cmhw/src
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-004a/en_gesture"
 
 # Filesystem
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13013734522 # (BOARD_USERDATAIMAGE_PARTITION_SIZE - 16384 for crypto footer)
 
 # Properties
-TARGET_SYSTEM_PROP += device/bq/piccolo/system.prop
+TARGET_SYSTEM_PROP += device/zte/p839v55/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/bq/piccolo/sepolicy
+BOARD_SEPOLICY_DIRS += device/zte/p839v55/sepolicy
 
 # Inherit from the proprietary version
--include vendor/bq/piccolo/BoardConfigVendor.mk
+-include vendor/zte/p839v55/BoardConfigVendor.mk
